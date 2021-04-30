@@ -1,5 +1,5 @@
 # To add a new cell, type '# %%'
-# To add a new markdown cell, type '# %% [markdown] [markdown]
+# To add a new markdown cell, type '# %%
 # # Data walking through
 import pandas as pd
 import numpy as np
@@ -68,7 +68,7 @@ wish_df, wish_matrix = transactionEncoder(df)
 
 print(wish_df.head())
 
-print(np.unique(wish_df.sum(), return_counts=True)) [markdown]
+print(np.unique(wish_df.sum(), return_counts=True))
 # # Transaction-based wish prediction using apriori
 from mlxtend.frequent_patterns import apriori
 from mlxtend.frequent_patterns import association_rules
@@ -77,7 +77,7 @@ frequent_itemsets = apriori(wish_df, min_support=0.15)
 print(frequent_itemsets)
 rules = association_rules(frequent_itemsets, metric="confidence")
 # Something FAILED
-print(rules) [markdown]
+print(rules)
 # # User-based prediction using cosine similarity
 from scipy.stats.stats import pearsonr
 from sklearn.metrics.pairwise import cosine_similarity
