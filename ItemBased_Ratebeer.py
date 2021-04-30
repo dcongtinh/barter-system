@@ -76,8 +76,8 @@ def to_row_df(items, _columns):
 
 def predict (utility_df, utility_matrix, test_items, return_num=5):
     sim_items = cosine_similarity(utility_df, utility_matrix[:])[0]
-    tu = mau = 0
     for j in test_items:
+        tu = mau = 0
         for i in range(utility_matrix.shape[0]):
             tu += sim_items[i] * utility_matrix[i][j]
             mau += sim_items[i]
