@@ -115,8 +115,8 @@ def givenN_evaluate(train, test, given_num):
         score += predict(row_df, train_matrix, test_items, 10)
         cnt += 1
         print("{}/{} - score = {} - time = {}".format(cnt, i+1, score, time.time() - _start_time))
-        if cnt == 10:
-            break
+        # if cnt == 10:
+        #     break
     print(time.time() - start_time)
     print('cnt =', cnt)
     return score
